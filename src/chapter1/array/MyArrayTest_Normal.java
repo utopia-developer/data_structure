@@ -1,6 +1,6 @@
 package chapter1.array;
 
-public class MyArrayTest {
+public class MyArrayTest_Normal {
     public static void main(String[] args) {
         MyArray<Integer> array = new MyArray<>(20);
         for (int i = 0; i < 10; i++) {
