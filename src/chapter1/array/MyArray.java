@@ -20,7 +20,7 @@ public class MyArray<T> {
      * @param capacity 数组容量
      */
     public MyArray(int capacity) {
-        data = (T[])new Object[capacity];
+        data = (T[]) new Object[capacity];
         size = 0;
     }
 
@@ -83,11 +83,11 @@ public class MyArray<T> {
      * @param element 添加的元素
      */
     public void add(int index, T element) {
-        if (size == data.length) {
-            throw new IllegalArgumentException("add() failed, data array is full.");
-        }
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("add() failed, input index required >= 0 and <= size");
+        }
+        if (size == data.length) {
+            resize(2 * getCapacity());
         }
         for (int i = size - 1; i >= index; i--) {
             data[i + 1] = data[i];
@@ -173,6 +173,10 @@ public class MyArray<T> {
         //使用泛型后添加此语句，释放引用，从而交由Java自动回收机制处理，清理内存（非必须语句）
         // loitering objects ！= memory leak
         data[size] = null;
+
+        if (size == data.length / 2) {
+            resize(data.length / 2);
+        }
         return removeValue;
     }
 
@@ -220,5 +224,14 @@ public class MyArray<T> {
         }
         res.append(']');
         return res.toString();
+    }
+
+
+    private void resize(int newCapacity) {
+        T[] newData = (T[]) new Object[newCapacity];
+        for (int i = 0; i < size; i++) {
+            newData[i] = data[i];
+        }
+        data = newData;
     }
 }
