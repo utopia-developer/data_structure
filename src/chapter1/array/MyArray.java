@@ -174,7 +174,7 @@ public class MyArray<T> {
         // loitering objects ！= memory leak
         data[size] = null;
 
-        if (size == data.length / 2) {
+        if (size == data.length / 4 && data.length / 2 != 0) {
             resize(data.length / 2);
         }
         return removeValue;
