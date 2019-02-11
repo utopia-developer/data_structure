@@ -1,4 +1,4 @@
-package chapter1.array;
+package chapter2.array.array;
 
 public class MyArrayTest_Normal {
     public static void main(String[] args) {

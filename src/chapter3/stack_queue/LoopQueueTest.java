@@ -1,4 +1,4 @@
-package chapter2.stack_queue;
+package chapter3.stack_queue;
 
 public class LoopQueueTest {
     public static void main(String[] args) {

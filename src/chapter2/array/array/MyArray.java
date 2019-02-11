@@ -1,4 +1,4 @@
-package chapter1.array;
+package chapter2.array.array;
 
 /**
  * @author utopia

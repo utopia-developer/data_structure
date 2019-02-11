@@ -1,4 +1,4 @@
-package chapter1.array;
+package chapter2.array.array;
 
 public class Student {
     private String name;

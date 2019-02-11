@@ -1,4 +1,4 @@
-package chapter2.stack_queue;
+package chapter3.stack_queue;
 
 public class ArrayQueue<T> implements Queue<T> {
     private MyArray<T> array;

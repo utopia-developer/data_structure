@@ -1,4 +1,4 @@
-package chapter2.stack_queue;
+package chapter3.stack_queue;
 
 public class LoopQueue<T> implements Queue<T> {
     private T[] data;

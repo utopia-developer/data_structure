@@ -1,4 +1,4 @@
-package chapter2.stack_queue;
+package chapter3.stack_queue;
 
 /**
  * @author utopia

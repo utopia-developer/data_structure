@@ -1,4 +1,4 @@
-package chapter2.stack_queue;
+package chapter3.stack_queue;
 
 /**
  * 定义ArrayStack类实现Stack<T>接口，实现动态数组栈
