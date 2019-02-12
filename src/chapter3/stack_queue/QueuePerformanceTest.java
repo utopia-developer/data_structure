@@ -1,5 +1,7 @@
 package chapter3.stack_queue;
 
+import chapter4.linkedlist.LinkedListQueue;
+
 import java.util.Random;
 
 public class QueuePerformanceTest {
@@ -18,7 +20,7 @@ public class QueuePerformanceTest {
     }
 
     public static void main(String[] args) {
-        final int OPERATION_NUMBER = 10000;
+        final int OPERATION_NUMBER = 100000;
         ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
         double arrayQueueTime = testQueueTime(arrayQueue, OPERATION_NUMBER);
         System.out.println("ArrayQueue Operation Time = " + arrayQueueTime + " s");
@@ -26,5 +28,9 @@ public class QueuePerformanceTest {
         LoopQueue<Integer> loopQueue = new LoopQueue<>();
         double loopQueueTime = testQueueTime(loopQueue, OPERATION_NUMBER);
         System.out.println("LoopQueue Operation Time = " + loopQueueTime + " s");
+
+        LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
+        double linkedListQueueTime = testQueueTime(linkedListQueue, OPERATION_NUMBER);
+        System.out.println("LinkedListQueue Operation Time = " + linkedListQueueTime + " s");
     }
 }
